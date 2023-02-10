@@ -83,7 +83,7 @@ class Spreadsheet:
 
     def setCellAt(self, row, col, cellOrStr) -> None:
         if (row < 1 or row > self.getRowNum()) or (col < 1 or col > self.getColNum()):
-            print('Index out of range!')
+            print('Out of range!')
             return -1
         if isinstance(cellOrStr, Cell):
             self.__cells[row -1][col -1] = cellOrStr
@@ -94,7 +94,7 @@ class Spreadsheet:
     
     def getCellAt(self, row, col) -> None:
         if (row < 1 or row > self.getRowNum()) or (col < 1 or col > self.getColNum()):
-            print('Index out of range!')
+            print('Out of range!')
             return -1
         return self.__cells[row - 1][col - 1]
 
